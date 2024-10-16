@@ -38,5 +38,22 @@ $x(t) = \mathcal{L}^{-1} \left( \frac{1}{ms^2 + bs + k} \right)$
 $x(t) = ? $  
 
 ---
-# P2.26
+# P2.26  
+$M \cdot \frac{d^2 x(t)}{dt^2} = F(t) - b \cdot \frac{d x(t)}{dt} + b \frac{d y(t)}{dt} - k \cdot x(t) +k \cdot y(t) $  
+$m \cdot \frac{d^2 y(t)}{dt^2} = b \cdot \frac{d x(t)}{dt} - b\cdot \frac{d y(t)}{dt} + k \cdot x(t) - k \cdot y(t)$  
+
+$\text{라플라스 변환}$  
+$s^2 \cdot M \cdot X(s) = F(s) - b \cdot s \cdot X(s) + b \cdot s \cdot Y(s) - k \cdot X(s) +k \cdot Y(s)$  
+$s^2 \cdot m \cdot Y(s) = b \cdot s \cdot X(s) - b \cdot s \cdot Y(s) + k \cdot X(s) - k \cdot Y(s)$  
+
+$\text{X(s)에 관한 식으로 정리}$  
+$-(s^2 \cdot M - b \cdot s - k)\cdot X(s) = -F(s) - (b \cdot s + k) \cdot Y(s) $  
+$(b \cdot s) \cdot X(s) = (S^2 \cdot m + b \cdot s + k) \cdot Y(s) $  
+$X(s) = \frac{(S^2 \cdot m + b \cdot s + k)}{(b \cdot s + k)} \cdot Y(s)$   
+
+$\text{X(s) 식을 대입하여 전달함수 구하기}$  
+$\frac{Y(s)}{F(s)} = \frac{(bs + k)}{(s^2M-bs-k)(s^2m+bs+k)-(bs+k)^2}$
+
+---
+# P2.37  
 
