@@ -1,38 +1,42 @@
 # 2020732077_양봉윤_제어공학_HW1
 ---
 # P2.7  
-$\text{적분 증폭기 회로의 전달함수는 입력전압과 출력전압의 관계}$  
+$\text{적분 증폭기 회로의 전달함수H(s)는 입력전압과 출력전압의 관계}$  
 
-$\text{OPamp 특성을 이용하여 KCL 사용}$
+$\text{* OPamp 특성을 이용하여 KCL 사용}$
 
-$i_1(t) = \frac{V_0 - V_1(s)}{R}$  
-$i_2(t) = - C \frac{d(V_2(s)-V_0)}{dt}$  
+$i_1(t) = \frac{V_0 - V_1(s)}{R}\ \ , \ \ \  i_2(t) =  C  \ \frac{d(V_2(s)-V_0)}{dt}$  
+    
+${\mathcal{L}\} \ i_1(t) \quad \Rightarrow \quad I_1(s) = \frac{-V_1(s)}{R}$  
+${\mathcal{L}\} \ i_2(t) \quad \Rightarrow \quad I_2(s) = C \cdot s \cdot V_2(s)$  
 
-$i_1(t){와}i_2(t){라플라스 변환}$   
-  
-${\mathcal{L}}i_1(t) = I_1(s) = $  
-${\mathcal{L}}i_2(t) = I_2(s) = -C \cdot s \cdot V_2(s)$  
+$\frac{-V_1(s)}{R} =  C \cdot s \cdot V_2(s)$  
+$\therefore H(s) = \frac{V_2(s)}{V_i(s)} = \frac{-1}{R \cdot C \cdot s} $  
 
+---
+# P2.12
 
-$\frac{V_i(s)}{R} = -C \cdot s \cdot V_2(s)$
+$R(s) \cdot k \cdot \frac{1}{s + 50} = Y(s)$
 
-$V_2(s) = \frac{-V_i(s)}{R C s}$
+$\lim_{t \to \infty} y(t) = \lim_{s \to 0}S \cdot Y(s) = \lim_{s \to 0} \frac{s \cdot K}{s(s + 50)} = 1$  
 
-$\text{전달함수} \quad H(s) = \frac{-V_2(s)}{V_i(s)} = \frac{1}{R C s}$
+$\therefore k = 50$
 
-$R(s) = \frac{K}{s + 50} = Y(s)$
+---
+# P2.15
 
-$\text{단계단 입력신호로 } r(t)\text{의 과도값 변화}$
+$\text{주어진 스프링-질량 시스템의 운동방정식은 다음과 같다.}$  
+$m \cdot \frac{d^2 x(t)}{dt^2} + b \cdot \frac{d x(t)}{dt} + k \cdot x(t) = \delta(t)$
 
-$R(s) = \frac{1}{s} \quad \therefore \quad Y(s) = \frac{K}{s(s+50)}$
+$\text{운동 방정식을 라플라스 변환}$      
+$m \cdot s^2 \cdot X(s) + b \cdot s \cdot X(s) + k \cdot X(s) = 1$
 
-$\lim_{t \to \infty} y(t) = \lim_{s \to 0} Y(s) = \lim_{s \to 0} \frac{sK}{s(s + 50)} = \frac{K}{50}$
+$X(s) = \frac{1}{m\cdot s^2 + b\cdot s + k}$
 
-$m \ddot{x}(t) + b \dot{x}(t) + k x(t) = \delta(t)$
+$\text{라플라스 역변환으로 시스템 응답 x(t)}$  
+$x(t) = \mathcal{L}^{-1} \left( \frac{1}{ms^2 + bs + k} \right)$  
+$x(t) = ? $  
 
-$s^2 X(s) + bs X(s) + \frac{k}{m} X(s) = \frac{1}{m}$
-
-$X(s) = \frac{1}{ms^2 + bs + k}$
-
-$x(t) = \mathcal{L}^{-1} \left( \frac{1}{ms^2 + bs + k} \right)$
+---
+# P2.26
 
