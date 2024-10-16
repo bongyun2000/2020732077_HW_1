@@ -56,4 +56,22 @@ $\frac{Y(s)}{F(s)} = \frac{(bs + k)}{(s^2M-bs-k)(s^2m+bs+k)-(bs+k)^2}$
 
 ---
 # P2.37  
+$\text{시스템을 표현하는 미분방정식}$  
+$* m_1 = m_2 = 1, K_1 = K_2 = 1이다.$  
+$m_1 \cdot \frac{d^2 x(t)}{dt^2} = -k_1 \cdot x(t) - k_2 (x(t)-y(t)) $  
+$m_2 \cdot \frac{d^2 y(t)}{dt^2} = -k_2 (y(t) - x(t)) - u(t) $  
 
+$\frac{d^2 x(t)}{dt^2} = 2x(t) + y(t)) $  
+$\frac{d^2 y(t)}{dt^2} = y(t) + x(t)) - u(t) $  
+
+$\text{라플라스 변환}$  
+$s^2 X(s) = -2X(s) + Y(s) $  
+$s^2 Y(s) = X(s) - Y(s) - U(s) $  
+
+$\text{X(s)관련 식으로 정리}$  
+$X(s) = \frac{Y(s)}{(S^2+2)} $  
+$(S^2+1)Y(s) + U(s) = X(s)$  
+$(S^2+1)Y(s) + U(s) = \frac{Y(s)}{(S^2+2)}$  
+$U(s) = {\frac{1}{(S^2+2} - (S^2+1)}Y(s)$  
+${\frac{1-(S^2+1)+(S^2+2)}{S^2+2}}Y(s) = U(s)$  
+$\frac{Y(s)}{U(s)} = -\frac{S^2+2}{S^4+3S^2+1}$
